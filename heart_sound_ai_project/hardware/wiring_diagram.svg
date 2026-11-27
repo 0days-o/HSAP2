@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780">
+  <rect width="1200" height="780" fill="#f4f8fc"/>
+  <text x="60" y="58" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#183b56">LOW-COST HEART-SOUND RECORDER — WIRING BLUEPRINT</text>
+  <text x="60" y="91" font-family="Arial, sans-serif" font-size="17" fill="#426579">ESP32 + INMP441 microphone → Wi-Fi → Raspberry Pi 4 / laptop running Python</text>
+
+  <!-- ESP32 board -->
+  <rect x="75" y="160" width="430" height="455" rx="22" fill="#e4ebf1" stroke="#37627a" stroke-width="3"/>
+  <text x="290" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#183b56">ESP32 DevKit</text>
+  <rect x="188" y="232" width="205" height="95" rx="10" fill="#224e3f" stroke="#12352b" stroke-width="3"/>
+  <text x="290" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#f4f8fc">ESP32</text>
+  <text x="290" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#d7eee1">Wi-Fi + I²S</text>
+  <rect x="105" y="355" width="370" height="236" rx="12" fill="#ffffff" stroke="#a1bac8" stroke-width="2"/>
+  <text x="130" y="390" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#183b56">Connect to microphone</text>
+  <g font-family="Arial, sans-serif" font-size="18" fill="#183b56">
+    <text x="130" y="433">3V3</text><text x="130" y="469">GND</text><text x="130" y="505">GPIO 26</text><text x="130" y="541">GPIO 25</text><text x="130" y="577">GPIO 33</text>
+  </g>
+  <circle cx="282" cy="427" r="7" fill="#e3a13b"/><circle cx="282" cy="463" r="7" fill="#303c45"/><circle cx="282" cy="499" r="7" fill="#bf5252"/><circle cx="282" cy="535" r="7" fill="#3767bf"/>
+  <circle cx="282" cy="571" r="7" fill="#2c9b75"/>
+
+  <!-- I2S microphone -->
+  <rect x="650" y="215" width="330" height="330" rx="20" fill="#e7f2ec" stroke="#3a8068" stroke-width="3"/>
+  <text x="815" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1d5a46">INMP441 I²S mic</text>
+  <rect x="725" y="280" width="180" height="145" rx="10" fill="#17684f" stroke="#0f503c" stroke-width="3"/>
+  <circle cx="815" cy="342" r="30" fill="#a6c8b9" stroke="#d9eae2" stroke-width="4"/>
+  <circle cx="815" cy="342" r="9" fill="#183b56"/>
+  <text x="815" y="458" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#1d5a46">VDD · GND · SCK · WS · SD · L/R</text>
+  <text x="815" y="487" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#1d5a46">L/R must be tied to GND (left slot)</text>
+  <text x="815" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#426579">Power with 3.3 V only</text>
+
+  <!-- Wires, colors are labeled in mapping below -->
+  <path d="M282 427 L560 427 L560 310 L650 310" fill="none" stroke="#e3a13b" stroke-width="5"/>
+  <path d="M282 463 L585 463 L585 360 L650 360" fill="none" stroke="#303c45" stroke-width="5"/>
+  <path d="M282 499 L610 499 L610 405 L650 405" fill="none" stroke="#bf5252" stroke-width="5"/>
+  <path d="M282 535 L625 535 L625 452 L650 452" fill="none" stroke="#3767bf" stroke-width="5"/>
+  <path d="M282 571 L635 571 L635 485 L650 485" fill="none" stroke="#2c9b75" stroke-width="5"/>
+
+  <!-- network -->
+  <path d="M505 280 C550 230, 580 230, 615 270" fill="none" stroke="#6d6bb5" stroke-width="4" stroke-dasharray="10 8"/>
+  <text x="560" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#5a589d">Wi-Fi</text>
+
+  <!-- Host -->
+  <rect x="725" y="590" width="405" height="130" rx="16" fill="#e8eaf7" stroke="#6967a4" stroke-width="3"/>
+  <text x="927" y="629" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#34336f">Raspberry Pi 4 / laptop</text>
+  <text x="927" y="662" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#34336f">Flask receiver → WAV → TensorFlow model</text>
+  <text x="927" y="691" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#426579">Keep server on private LAN only</text>
+  <path d="M980 350 C1070 380, 1070 510, 1000 590" fill="none" stroke="#6d6bb5" stroke-width="4" stroke-dasharray="10 8"/>
+  <text x="1070" y="465" font-family="Arial, sans-serif" font-size="16" fill="#5a589d" transform="rotate(90 1070 465)">HTTP POST · 8 kHz PCM</text>
+
+  <!-- Pin mapping table -->
+  <rect x="60" y="640" width="595" height="95" rx="12" fill="#ffffff" stroke="#a1bac8" stroke-width="2"/>
+  <text x="85" y="670" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#183b56">Pin mapping (wire color in this diagram)</text>
+  <text x="85" y="700" font-family="Arial, sans-serif" font-size="16" fill="#183b56">ESP32 3V3 → VDD (gold) · GND → GND (black) · GPIO26 → SCK (red)</text>
+  <text x="85" y="725" font-family="Arial, sans-serif" font-size="16" fill="#183b56">GPIO25 → WS (blue) · GPIO33 ← SD (green) · L/R → GND</text>
+
+  <text x="60" y="760" font-family="Arial, sans-serif" font-size="13" fill="#527083">Not to physical scale. Match labels on your exact board/module; module pin labels can vary.</text>
+</svg>

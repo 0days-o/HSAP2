@@ -1,0 +1,1 @@
+Older project versions saved the latest model directly in this folder. The current version saves every model and report in its own timestamped folder under `experiments/`. The menu and receiver automatically locate the latest completed model through `experiments/latest_run.txt`. This folder remains only for compatibility with an older model file.

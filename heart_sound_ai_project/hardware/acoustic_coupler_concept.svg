@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+  <rect width="1200" height="620" fill="#f7fafc"/>
+  <text x="55" y="55" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#183b56">REMOVABLE ACOUSTIC COUPLER — CONCEPTUAL CROSS-SECTION</text>
+  <text x="55" y="85" font-family="Arial, sans-serif" font-size="17" fill="#456779">Concept only; not to scale. Measure the actual chestpiece stem and microphone breakout before printing.</text>
+
+  <!-- Stethoscope chestpiece -->
+  <rect x="65" y="210" width="160" height="125" rx="20" fill="#c6d5df" stroke="#48687b" stroke-width="3"/>
+  <ellipse cx="145" cy="335" rx="80" ry="18" fill="#8ea8b8" stroke="#48687b" stroke-width="3"/>
+  <rect x="125" y="155" width="40" height="55" rx="8" fill="#9cb3c2" stroke="#48687b" stroke-width="3"/>
+  <text x="145" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#183b56">Stethoscope</text>
+  <text x="145" y="414" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#183b56">chestpiece</text>
+
+  <!-- tubing -->
+  <path d="M145 155 L145 128 Q145 115 160 115 L350 115 Q370 115 370 135 L370 250" fill="none" stroke="#5e7a8b" stroke-width="28" stroke-linecap="round"/>
+  <path d="M145 155 L145 128 Q145 115 160 115 L350 115 Q370 115 370 135 L370 250" fill="none" stroke="#e6f0f5" stroke-width="14" stroke-linecap="round"/>
+  <text x="270" y="99" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#183b56">Existing stethoscope tube</text>
+
+  <!-- coupler housing -->
+  <rect x="320" y="225" width="345" height="170" rx="20" fill="#e6eef3" stroke="#48687b" stroke-width="4"/>
+  <rect x="345" y="258" width="295" height="105" rx="14" fill="#ffffff" stroke="#9db3c0" stroke-width="2"/>
+  <path d="M370 250 L370 285 L430 285" fill="none" stroke="#5e7a8b" stroke-width="18" stroke-linecap="round"/>
+  <path d="M370 250 L370 285 L430 285" fill="none" stroke="#e6f0f5" stroke-width="8" stroke-linecap="round"/>
+  <text x="492" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#183b56">3D-printed / taped housing</text>
+  <text x="492" y="333" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#183b56">Small sealed acoustic cavity</text>
+  <text x="492" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#456779">Use a soft gasket around the port</text>
+
+  <!-- board and microphone port -->
+  <rect x="665" y="250" width="275" height="130" rx="12" fill="#d7e8df" stroke="#2d7558" stroke-width="4"/>
+  <text x="802" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#1c5a43">INMP441 breakout PCB</text>
+  <rect x="707" y="300" width="190" height="48" rx="7" fill="#287a5d" stroke="#155b42" stroke-width="2"/>
+  <circle cx="802" cy="324" r="13" fill="#c7e0d4" stroke="#f0faf4" stroke-width="3"/>
+  <path d="M645 324 L704 324" stroke="#2d7558" stroke-width="5"/>
+  <text x="805" y="368" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#1c5a43">Mic acoustic port faces cavity</text>
+
+  <!-- arrows & warnings -->
+  <path d="M230 285 L308 285" stroke="#d18a2b" stroke-width="5"/>
+  <polygon points="308,285 293,276 293,294" fill="#d18a2b"/>
+  <path d="M640 324 L660 324" stroke="#d18a2b" stroke-width="5"/>
+  <polygon points="660,324 645,315 645,333" fill="#d18a2b"/>
+  <path d="M802 385 L802 445 L810 445" stroke="#b94b4b" stroke-width="3" fill="none"/>
+  <text x="820" y="450" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#a63f3f">Do not cover/seal the mic port.</text>
+
+  <rect x="65" y="475" width="1070" height="95" rx="14" fill="#fff3dc" stroke="#d5a24d" stroke-width="2"/>
+  <text x="90" y="507" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#8b5a16">Build notes</text>
+  <text x="90" y="536" font-family="Arial, sans-serif" font-size="17" fill="#6e501e">1. Start removable: short tube + soft gasket + tape/foam before designing a permanent enclosure.</text>
+  <text x="90" y="560" font-family="Arial, sans-serif" font-size="17" fill="#6e501e">2. Compare sealed vs. loose couplings using the same speaker playback and fixed volume; save WAVs and compare RMS/noise.</text>
+  <text x="55" y="602" font-family="Arial, sans-serif" font-size="13" fill="#527083">Acoustic coupling is a major source of variation. This drawing does not establish clinical sound quality or patient safety.</text>
+</svg>

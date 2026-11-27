@@ -1,0 +1,3 @@
+# Optional only if using pcg_ai/record_from_usb.py instead of the ESP32.
+-r requirements.txt
+sounddevice>=0.4.6,<1.0

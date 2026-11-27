@@ -1,0 +1,1 @@
+The local receiver saves test WAV recordings in this folder by default. Do not store identifiable personal information here. Keep test audio local and use controlled public-audio playback until your teacher/guardian approves any human-subject protocol.
